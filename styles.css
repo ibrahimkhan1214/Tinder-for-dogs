@@ -1,0 +1,202 @@
+/*
+-----------REFACTIORING NOTES-------------
+Changed the padding=> instead of adding padding to each section I changed the container fluid padding and added the div for it in each section.
+Commented the features
+headings divs were added for each heading.
+common features like font family for every heading was bundled together.
+
+GK: container-fluid is a bootstrap feature(dont try to change it)
+*/
+
+
+/*general body properties*/
+body{
+font-family: 'Montserrat';
+}
+
+/*title Section properties*/
+#title {
+  background-color: #ff4c68;
+  color: white;
+}
+
+/*Over ride the container-fluid to have less top padding for the navbar in title section to look nicer*/
+#title .container-fluid{
+  padding: 2% 15% 7%;
+}
+
+/*All title headings font should be this*/
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat';
+  font-weight: 900; 
+}
+
+/*Main description properties*/
+.intro-title {
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/*paragraph properties*/
+p{
+  color: grey;
+}
+
+.container-fluid {
+  padding: 4% 15%;
+}
+
+/* navigation bar */
+.navbar{
+  padding: 0 0 4.5rem;
+}
+
+/*navigation item properties(This encloses all the navigation links)*/
+.nav-item{
+  padding: 0 18px;
+}
+
+/*navigation items(Contact,pricing etc.) properties*/
+.nav-link{
+  font-size: 1.2rem;
+  font-family: 'Montserrat';
+  font-weight: 500;
+} 
+/*Brand name on the navigation bar properties*/
+.navbar-brand{
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  font-size: 2rem;
+}
+/*Title download button properties*/
+.Download-Buttons-title{
+  margin: 5% 9% 5% 0%;  
+} 
+
+/*introduction Phone image properties*/
+.titleimage{
+ width: 20%;
+ margin-left: 7%;
+ transform: rotate(25deg);         /*rotating the phone image*/
+ position: absolute;               /*positioning to make it absolute and z-index here is 0 so that it goes under the features section*/
+}
+/*Features section properties*/
+#features{
+  position: relative;              /*Because we need a position for manipulating z-index*/
+  background-color: white;
+  z-index: 1;                      /*Setting z-index to 1 so it lays over the title phone image*/
+}
+
+.featurebox{
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+/*these are the feature icons(bullseye,check circle and heart)*/
+.icon{
+  color: #df7190;
+   margin-bottom: 1rem;            /*margin and padding dont work the same */
+}
+
+/*Hovering properties of the icons*/
+.icon:hover{
+  color: #cc2456;
+}
+
+/*Testimonial section*/
+#testimonials{
+  padding-top: 5%;
+  text-align: center;
+  background-color: #e2642a;
+  color: white;
+}
+
+/*Testimonial title properties*/
+.testimonials-title{
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+  font-size:40px;
+}
+
+/*testimonial image properties (The dog photos in slides)*/
+.testimonialimage{
+  padding-top: 2%;
+  padding-left: 9%;             /*adding padding to thie circle makes it look like a guitar pick shape(I dont know what that shape is but looks pretty cool)*/
+  border-radius: 100%;          /*To make the square image circle*/
+  width: 25%;                   /*change the size of the image. */
+}
+
+/*The press logos section under the testimonial dog pics*/
+#press{
+  background-color: #e2642a;      /*different section but looks the same because of the background color*/
+  text-align: center;               /*Allign to the center*/
+}
+
+/*the press logos properties*/
+.presslogo{
+  width: 10%;                      /*Controlling the size of the logos*/
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/*pricing section properties*/
+#pricing{
+  padding: 100px;
+  text-align: center;
+}
+
+/*Each card item properties*/
+.card-item{
+  padding-top: 3%;
+  text-align: center;
+}
+/* using @media feature to make the site more responsive from desktop size to mobile size*/
+@media (max-width: 991px){
+  .titleimage{
+    position: static;               /*static is the same as not using position feature This makes the phone image stay visible*/
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 590px) {
+  .titleimage{
+    opacity: 0;                     /*if at mobile size which is about 590px remove the phone picture*/
+  }
+}
+
+/*Call to action section*/
+#cta{
+  text-align: center;
+  background-color:#f53f5a;
+  padding-bottom: 5%;
+}
+
+/*footer Title properties*/
+.footer-download-title{
+padding-left: 50px; 
+font-size: 3rem;
+}
+
+/*The download buttons all the way at the bottom of the website*/
+.foot-button{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+/*Footer section (social media logos and copyright)*/
+#footer{
+  text-align: center;
+}
+
+/*Social media logos properties*/
+.link-icons{
+  padding-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/*Hover properties for the logos(just change the colors)*/
+.link-icons:hover{
+  color: #cc2456;
+}
